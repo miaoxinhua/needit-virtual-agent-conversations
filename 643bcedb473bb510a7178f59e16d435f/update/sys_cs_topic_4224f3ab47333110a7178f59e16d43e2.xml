@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic">
+    <sys_cs_topic action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applicability>true</applicability>
+        <autopilot_topic>false</autopilot_topic>
+        <cb_topic_id display_value="View Open NeedIt Records">54bdc653477bb510a7178f59e16d43b5</cb_topic_id>
+        <channels/>
+        <definition>{"id":"54bdc653477bb510a7178f59e16d43b5","name":"_PRVW__0a247b2bf5333110112b838c65443e61","system_topic":false,"autopilot_topic":false,"vendor_id":"c2f0b8f187033200246ddd4c97cb0bb9","description":"_PRVW__0a247b2bf5333110112b838c65443e61","applicability":"true","categories":[],"key_phrases":["View Open NeedIt Records","NeedIt Request","need something"],"variables":[{"name":"LiveAgent_application","type":"java.lang.Object"},{"name":"__segment_trigger_87dcb9614f5d4d12a91e1d9223530a9f_done","type":"java.lang.Object","init_value":"false"},{"name":"previous_graph_node","type":"java.lang.Object"}],"fields":[{"type":"Reference","table_name":"sys_user","name":"user","unique":false,"key_phrases":[],"mask_type":"NONE","list":false,"static_enum_list":[]},{"type":"Boolean","name":"RootDecisionBranch_8e24f3ab7833311062345891d052aae1","unique":false,"default_value":"true","key_phrases":[],"mask_type":"NONE","list":false,"static_enum_list":[]},{"type":"String","name":"__silent_StartGoal_0b668bd140484bacb1c2d13c23bd1030","unique":false,"key_phrases":[],"mask_type":"NONE","list":false,"static_enum_list":[],"encrypt_if_secure":true},{"type":"String","name":"__silent_Decision_RootDecision_0e24f3ab32333110f499217a14b30ee1","unique":false,"key_phrases":[],"mask_type":"NONE","list":false,"static_enum_list":[],"encrypt_if_secure":true},{"type":"String","name":"__silent_Branch_RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1","unique":false,"key_phrases":[],"mask_type":"NONE","list":false,"static_enum_list":[],"encrypt_if_secure":true},{"type":"String","name":"__silent_TerminateGoal_57aaecf2f4e140b7b2cf283ba69d28a4","unique":false,"key_phrases":[],"mask_type":"NONE","list":false,"static_enum_list":[],"encrypt_if_secure":true}],"actions":[],"tasks":[{"type":"Consumer to system","show_as_button":true,"name":"primary","description":"primary","applicability":"vaVars.__segment_trigger_87dcb9614f5d4d12a91e1d9223530a9f_done==false &amp;&amp; true","mode":"Qmode","key_phrases":[],"greeting_msg":"vaInputs.initialize(\"user\");vaInputs.initialize(\"RootDecisionBranch_8e24f3ab7833311062345891d052aae1\");vaInputs.initialize(\"__silent_Decision_RootDecision_0e24f3ab32333110f499217a14b30ee1\");vaInputs.initialize(\"__silent_Branch_RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1\");vaInputs.initialize(\"__silent_TerminateGoal_57aaecf2f4e140b7b2cf283ba69d28a4\");vaInputs.initialize(\"__silent_StartGoal_0b668bd140484bacb1c2d13c23bd1030\");null;","fields":[{"name":"__silent_Decision_RootDecision_0e24f3ab32333110f499217a14b30ee1","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"RootDecision_for_goal_primary___RootDecision_0e24f3ab32333110f499217a14b30ee1\";vaInputs.__silent_Decision_RootDecision_0e24f3ab32333110f499217a14b30ee1=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"acknowledge_msg":"vaVars.previous_graph_node=\"RootDecision_for_goal_primary___RootDecision_0e24f3ab32333110f499217a14b30ee1\";var ackMsg=null;ackMsg=null;vaInputs.RootDecisionBranch_8e24f3ab7833311062345891d052aae1=true;ackMsg;","metadata":{"type":"graph_node","node_id":"RootDecision_0e24f3ab32333110f499217a14b30ee1","node_name":"RootDecision_for_goal_primary","predecessor_nodes":[],"next_node":"RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1","node_depth":1,"decision_stack":[],"loopback":{"from":[]}}},{"name":"__silent_Branch_RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1","applicable":"vaVars.previous_graph_node==\"RootDecision_for_goal_primary___RootDecision_0e24f3ab32333110f499217a14b30ee1\" &amp;&amp; ((vaInputs.RootDecisionBranch_8e24f3ab7833311062345891d052aae1.getValue() == true))","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1___RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1\";vaInputs.__silent_Branch_RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"acknowledge_msg":"vaVars.previous_graph_node=\"RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1___RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1\";var ackMsg=null;ackMsg=null;ackMsg;","metadata":{"type":"graph_node","node_id":"RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1","node_name":"RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1","predecessor_nodes":["RootDecision_for_goal_primary"],"next_node":"Start","node_depth":2,"decision_stack":["RootDecision_for_goal_primary"],"loopback":{"from":[]}}},{"name":"__silent_StartGoal_0b668bd140484bacb1c2d13c23bd1030","applicable":"vaVars.previous_graph_node==\"RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1___RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1\"","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"Start___0b668bd140484bacb1c2d13c23bd1030\";vaInputs.__silent_StartGoal_0b668bd140484bacb1c2d13c23bd1030=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"acknowledge_msg":"vaVars.previous_graph_node=\"Start___0b668bd140484bacb1c2d13c23bd1030\";var ackMsg=null;ackMsg=null;ackMsg;","metadata":{"type":"graph_node","node_id":"0b668bd140484bacb1c2d13c23bd1030","node_name":"Start","predecessor_nodes":["RootDecisionBranch_4e24f3ab6b333110908397d0d2f5b0e1"],"next_node":"End","node_depth":3,"decision_stack":["RootDecision_for_goal_primary"],"loopback":{"from":[]}}},{"name":"__silent_TerminateGoal_57aaecf2f4e140b7b2cf283ba69d28a4","applicable":"vaVars.previous_graph_node==\"Start___0b668bd140484bacb1c2d13c23bd1030\"","direction":"Input","required":true,"prompt_msg":"vaVars.previous_graph_node=\"End___57aaecf2f4e140b7b2cf283ba69d28a4\";vaInputs.__silent_TerminateGoal_57aaecf2f4e140b7b2cf283ba69d28a4=true;null;","confirm_msg_on_default_value":{"msg":"","val_for_confirm":true},"nlu_text_input":false,"nlu_confirmation_prompt":false,"acknowledge_msg":"vaVars.previous_graph_node=\"End___57aaecf2f4e140b7b2cf283ba69d28a4\";var ackMsg=null;ackMsg=null;vaVars.__segment_trigger_87dcb9614f5d4d12a91e1d9223530a9f_done=true;ackMsg;","metadata":{"type":"graph_node","node_id":"57aaecf2f4e140b7b2cf283ba69d28a4","node_name":"End","predecessor_nodes":["Start"],"node_depth":4,"decision_stack":["RootDecision_for_goal_primary"],"loopback":{"from":[]}}}],"variables_update":[]}],"roles":[],"active":true,"published":false,"library":false,"expose_on_palette":false,"palette_label":"","flexible_conversation_switching":false,"design_categories":[{"name":"NeedIt Virtual Agent Topics","visible":false,"sysId":"6e6b0613477bb510a7178f59e16d43aa"}],"nlu_provider":"","nlu_model":"","nlu_intent":"","topic_type":"STANDARD","channels":[],"triggerable_by_notification":false,"secure_custom_input_control":false,"score":0.0,"visible":false,"discoverable":false,"sys_scope":"643bcedb473bb510a7178f59e16d435f","sys_domain":"global","title":"View Open NeedIt Records","nlu_intent_label":"","nlu_model_label":""}</definition>
+        <design_category>6e6b0613477bb510a7178f59e16d43aa</design_category>
+        <discoverable>false</discoverable>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <is_system_topic>false</is_system_topic>
+        <key_phrases>View Open NeedIt Records NeedIt Request need something</key_phrases>
+        <last_published_on>2024-01-24 08:57:27</last_published_on>
+        <library>false</library>
+        <library_usage>null</library_usage>
+        <metaphone/>
+        <name>_PRVW__0a247b2bf5333110112b838c65443e61</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <published>false</published>
+        <roles/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <sys_class_name>sys_cs_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-24 08:57:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>4224f3ab47333110a7178f59e16d43e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>_PRVW__0a247b2bf5333110112b838c65443e61</sys_name>
+        <sys_package display_value="NeedIt Virtual Agent Conversations" source="x_762164_needit_vi">643bcedb473bb510a7178f59e16d435f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt Virtual Agent Conversations">643bcedb473bb510a7178f59e16d435f</sys_scope>
+        <sys_update_name>sys_cs_topic_4224f3ab47333110a7178f59e16d43e2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-24 08:57:27</sys_updated_on>
+        <title>View Open NeedIt Records</title>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+        <vendor display_value="ServiceNow">c2f0b8f187033200246ddd4c97cb0bb9</vendor>
+        <visible>false</visible>
+    </sys_cs_topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=4224f3ab47333110a7178f59e16d43e2"/>
+</record_update>
